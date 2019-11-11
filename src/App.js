@@ -1,25 +1,79 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+//import Hello from './components/Hello';
+//import logo from './logo.svg';
+//import './App.css';
+
+import Routes from './components/Routes';
+import Navbar from './components/Navbar'
 
 function App() {
+
+  //let counter = 1 //reuse
+  const [counter, setCounter] = useState(1)
+  //const number = [1,2,3,4,5]
+  //const name = 'Hanajung'
+  const [name, setName] = useState('Hanaung')
+  const [numbers, setNumber] = useState([])
+
+  //setTimeout(() => {
+    //console.log("Before Counter: ", counter);
+    //counter += 1;
+    //setCounter(counter + 1);
+    //setName("Bundit")
+
+    //numbers.push(1);
+    //console.log("Numbers => ", numbers);
+
+    //setNumber(numbers);
+    //setNumber([...numbers, 2]);
+    //console.log("After Counter: ", counter);
+  //}, 5000)
+
+  function hello(){
+    return 'Hello';
+  }
+
+  function handleClick(){
+    console.log("click >>");
+
+    setNumber([...numbers, 2]);
+    setName("Bundit");
+    setCounter(counter + 1);
+  }
+
+  function handleChange(e){
+    console.log("change...", e.target.value);
+    setName(e.target.value);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      <h1>App</h1>
+      {/*<Hello />*/}
+      <div>Counter: {counter}</div>
+      <div>Number: {numbers}</div>
+      <div>Name: {name}</div>
+      <Navbar />
+      <hr />
+      <Routes />
+      <div>
+        {
+        counter > 3 
+        ?
+        <span style={{color:'red'}}>Big</span>
+        :
+        <span style={{color:'blue'}}>Small</span>
+        }
+        <ul>
+          {numbers.map((each, idx) => {
+            return <li key={idx}>{each}</li>
+          })}
+        </ul>
+      </div>
+      <p>{hello()}</p>
+      <button onClick={handleClick}>Click</button>
+      <p><input type="text" onChange={handleChange} value={name}/></p>
+      </div>
   );
 }
 

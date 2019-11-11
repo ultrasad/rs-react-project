@@ -1,7 +1,11 @@
 import React, {useState} from 'react';
+import Helmet from 'react-helmet';
 //import Hello from './components/Hello';
 //import logo from './logo.svg';
 //import './App.css';
+
+import 'bulma/css/bulma.min.css';
+import './style.css';
 
 import Routes from './components/Routes';
 import Navbar from './components/Navbar'
@@ -13,7 +17,7 @@ function App() {
   //const number = [1,2,3,4,5]
   //const name = 'Hanajung'
   const [name, setName] = useState('Hanaung')
-  const [numbers, setNumber] = useState([])
+  const [numbers, setNumber] = useState([9])
 
   //setTimeout(() => {
     //console.log("Before Counter: ", counter);
@@ -48,31 +52,40 @@ function App() {
 
   return (
     <div>
-      <h1>App</h1>
+      <Helmet>
+        <title>React.js | Hanajung</title>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet" />
+      </Helmet>
       {/*<Hello />*/}
-      <div>Counter: {counter}</div>
-      <div>Number: {numbers}</div>
-      <div>Name: {name}</div>
-      <Navbar />
-      <hr />
-      <Routes />
-      <div>
-        {
-        counter > 3 
-        ?
-        <span style={{color:'red'}}>Big</span>
-        :
-        <span style={{color:'blue'}}>Small</span>
-        }
-        <ul>
-          {numbers.map((each, idx) => {
-            return <li key={idx}>{each}</li>
-          })}
-        </ul>
+      <section className="section">
+      <div className="container">
+        <h1><b>React Workshop</b></h1>
+
+        <div>Counter: {counter}</div>
+        <div>Number: {numbers}</div>
+        <div>Name: {name}</div>
+        <Navbar />
+        <hr />
+        <Routes />
+        <div>
+          {
+          counter > 3 
+          ?
+          <span style={{color:'red'}}>Big</span>
+          :
+          <span style={{color:'blue'}}>Small</span>
+          }
+          <ul>
+            {numbers.map((each, idx) => {
+              return <li key={idx}>{each}</li>
+            })}
+          </ul>
+        </div>
+        <p>{hello()}</p>
+        <button onClick={handleClick}>Click</button>
+        <p><input type="text" onChange={handleChange} value={name}/></p>
       </div>
-      <p>{hello()}</p>
-      <button onClick={handleClick}>Click</button>
-      <p><input type="text" onChange={handleChange} value={name}/></p>
+      </section>
       </div>
   );
 }

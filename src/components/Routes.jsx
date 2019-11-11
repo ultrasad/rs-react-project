@@ -1,5 +1,6 @@
 import React, {lazy, Suspense} from 'react';
-import {Switch, Route, Redirect} from 'react-router-dom';
+//import {Switch, Route, Redirect} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 
 //import Home from '../views/Home';
 //import About from '../views/About';
@@ -20,9 +21,9 @@ export default function Routes(){
             <Suspense fallback={<Loading />}>
             <Switch>
 
-            <Redirect exact from="/" to="/home" />
+            {/*<Redirect from="/" to="/home" />*/}
 
-            <Route path='/home' component={Home} />
+            <Route exact path='/home' component={Home} />
             <Route path='/about' component={About} />
             <Route path='/contact' component={Contact} />
             

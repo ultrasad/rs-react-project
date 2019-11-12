@@ -29,6 +29,8 @@ export default function Navbar(){
                 <NavLink exact to='/' {...style}>Home</NavLink>
                 <NavLink to='/about' className="navbar-item is-tab" activeClassName="is-active">About</NavLink>
                 <NavLink to='/contact' className="navbar-item is-tab" activeClassName="is-active">Contact</NavLink>
+                <NavLink to='/movie' className="navbar-item is-tab" activeClassName="is-active">Movie</NavLink>
+                <NavLink to='/form' className="navbar-item is-tab" activeClassName="is-active">Form</NavLink>
 
             </div>
             <div className="navbar-brand">

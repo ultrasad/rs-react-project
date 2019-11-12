@@ -9,6 +9,8 @@ import {Switch, Route} from 'react-router-dom';
 const Home = lazy(() => import(/*webpackChunkName: 'home' */ '../views/Home'))
 const About = lazy(() => import(/*webpackChunkName: 'about' */ '../views/About'))
 const Contact = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Contact'))
+const Movie = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Movie'))
+const Form = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Form'))
 
 function Loading(){
     return <h1>Loading...</h1>
@@ -26,6 +28,8 @@ export default function Routes(){
             <Route exact path='/home' component={Home} />
             <Route path='/about' component={About} />
             <Route path='/contact' component={Contact} />
+            <Route path='/movie' component={Movie} />
+            <Route path='/form' component={Form} />
             
             {/*
             <Route path='/home'>

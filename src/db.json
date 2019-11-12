@@ -1,0 +1,192 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Johnny English Strikes Again",
+      "year": 2018,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy"
+      ],
+      "rating": 6.3,
+      "duration": 89
+    },
+    {
+      "id": 2,
+      "title": "The Meg",
+      "year": 2018,
+      "genres": [
+        "Action",
+        "Horror",
+        "Sci-Fi"
+      ],
+      "rating": 5.8,
+      "duration": 113
+    },
+    {
+      "id": 3,
+      "title": "The Equalizer 2",
+      "year": 2018,
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "rating": 6.8,
+      "duration": 120
+    },
+    {
+      "id": 4,
+      "title": "First Man",
+      "year": 2018,
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "rating": 7.5,
+      "duration": 141
+    },
+    {
+      "id": 5,
+      "title": "Hunter Killer",
+      "year": 2018,
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "rating": 6.7,
+      "duration": 122
+    },
+    {
+      "id": 6,
+      "title": "The Nun",
+      "year": 2018,
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "rating": 6.7,
+      "duration": 99
+    },
+    {
+      "id": 7,
+      "title": "Mission Impossible - Fallout",
+      "year": 2018,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Thriller"
+      ],
+      "rating": 7.9,
+      "duration": 147
+    },
+    {
+      "id": 8,
+      "title": "Venom",
+      "year": 2018,
+      "genres": [
+        "Action",
+        "Sci-Fi"
+      ],
+      "rating": 6.8,
+      "duration": 112
+    },
+    {
+      "id": 9,
+      "title": "Night School",
+      "year": 2018,
+      "genres": [
+        "Comedy"
+      ],
+      "rating": 5.6,
+      "duration": 111
+    },
+    {
+      "id": 10,
+      "title": "The Guilty",
+      "year": 2018,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "rating": 7.6,
+      "duration": 85
+    },
+    {
+      "id": 11,
+      "title": "Searching",
+      "year": 2018,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "rating": 7.8,
+      "duration": 102
+    },
+    {
+      "id": 12,
+      "title": "Mile 22",
+      "year": 2018,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Crime"
+      ],
+      "rating": 6.1,
+      "duration": 94
+    },
+    {
+      "id": 13,
+      "title": "Solis",
+      "year": 2018,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "rating": 5,
+      "duration": 92
+    },
+    {
+      "id": 14,
+      "title": "Smallfoot",
+      "year": 2018,
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Comedy"
+      ],
+      "rating": 6.7,
+      "duration": 96
+    },
+    {
+      "id": 15,
+      "title": "Alpha",
+      "year": 2018,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Family"
+      ],
+      "rating": 6.8,
+      "duration": 96
+    },
+    {
+      "id": 16,
+      "title": "Jurassic World - Fallen Kingdom",
+      "year": 2018,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "rating": 6.3,
+      "duration": 128
+    }
+  ]
+}

@@ -67,6 +67,7 @@ function App() {
         <Navbar />
         <hr />
         <Routes />
+        <hr />
         <div>
           {
           counter > 3 

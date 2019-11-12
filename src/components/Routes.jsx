@@ -11,6 +11,7 @@ const About = lazy(() => import(/*webpackChunkName: 'about' */ '../views/About')
 const Contact = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Contact'))
 const Movie = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Movie'))
 const Form = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Form'))
+const Form2 = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Form2'))
 
 function Loading(){
     return <h1>Loading...</h1>
@@ -30,6 +31,7 @@ export default function Routes(){
             <Route path='/contact' component={Contact} />
             <Route path='/movie' component={Movie} />
             <Route path='/form' component={Form} />
+            <Route path='/form2' component={Form2} />
             
             {/*
             <Route path='/home'>

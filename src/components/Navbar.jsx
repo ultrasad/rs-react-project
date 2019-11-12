@@ -31,6 +31,7 @@ export default function Navbar(){
                 <NavLink to='/contact' className="navbar-item is-tab" activeClassName="is-active">Contact</NavLink>
                 <NavLink to='/movie' className="navbar-item is-tab" activeClassName="is-active">Movie</NavLink>
                 <NavLink to='/form' className="navbar-item is-tab" activeClassName="is-active">Form</NavLink>
+                <NavLink to='/form2' className="navbar-item is-tab" activeClassName="is-active">Form2</NavLink>
 
             </div>
             <div className="navbar-brand">

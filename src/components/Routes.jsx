@@ -12,6 +12,12 @@ const Contact = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Co
 const Movie = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Movie'))
 const Form = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Form'))
 const Form2 = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Form2'))
+const Props = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Props'))
+const Chart = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Chart'))
+const Calendar = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Calendar'))
+const Slick = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Slick'))
+const User = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/User'))
+const Search = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Search'))
 
 function Loading(){
     return <h1>Loading...</h1>
@@ -32,6 +38,12 @@ export default function Routes(){
             <Route path='/movie' component={Movie} />
             <Route path='/form' component={Form} />
             <Route path='/form2' component={Form2} />
+            <Route path='/props' component={Props} />
+            <Route path='/chart' component={Chart} />
+            <Route path='/calendar' component={Calendar} />
+            <Route path='/slick' component={Slick} />
+            <Route path='/user' component={User} />
+            <Route path='/search' component={Search} />
             
             {/*
             <Route path='/home'>

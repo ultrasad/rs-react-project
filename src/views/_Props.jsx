@@ -1,31 +1,21 @@
-import React, {useState} from 'react';
-import Level1 from '../components/Level1';
+import React from 'react';
+//import Level1 from '../components/Level1';
 import Clock from '../components/Clock';
-
-import LanguageContext from '../context/LanguageContext';
 
 export default function Props(props){
 
     //console.log(props);
-    
+    /* 
         const [counter, setCounter] = useState(1);
-        const [language, setLanguage] = useState('th');
 
-        /* function handleClick(){
+        function handleClick(){
             setCounter(counter + 1)
-        } */
+        }
 
         function resetCounter(){
             setCounter(1);
         }
-
-        function toggleLanguage(){
-            setLanguage(language === 'th' ? 'en': 'th');
-        }
-   
-
-   //const [counter, setCounter] = useState(1);
-
+    */
     return (
         <div className="box">
 
@@ -49,14 +39,9 @@ export default function Props(props){
             <p><button onClick={handleClick} className="button">Update!</button></p>
             <hr />
             <p><button onClick={resetCounter} className="button is-danger">Reset Counter from Main!</button></p>
-            <hr />*/}
-            <p>
-                <button className="button" onClick={toggleLanguage}>{language === 'th' ? 'en' : 'th'}</button>
-            </p>
-            <LanguageContext.Provider value={{language, toggleLanguage}}>
-                <Level1 counter={counter} resetCounter={resetCounter} />
-            </LanguageContext.Provider>
-            
+            <hr />
+            <Level1 counter={counter} resetCounter={resetCounter} />
+            */}
         </div>
     )
 }

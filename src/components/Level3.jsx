@@ -1,8 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
+
+import LanguageContext from '../context/LanguageContext';
 
 export default function Level3({counter=0, resetCounter}){ //set default initial with {params}
     
     const[localCounter, setLocalCounter] = useState(counter);
+
+    const { language, toggleLanguage } = useContext(LanguageContext);
 
     function handleClick(){
         setLocalCounter(localCounter + 1)
@@ -15,8 +19,8 @@ export default function Level3({counter=0, resetCounter}){ //set default initial
 
     return (
         <div className="box">
-            <h1 className="title">Props Level 3 | Local Counter: {counter} - {localCounter}</h1>
-            <p><button onClick={handleClick} className="button">Update Local</button></p>
+            <h1 className="title">Props Level 3 | Local Counter: {counter} - {localCounter} | Lanaguage: {language}</h1>
+            <p><button onClick={handleClick} className="button">Update Local</button> | <button onClick={toggleLanguage} className="button">Toggle Language</button></p>
             <hr />
             <p><button onClick={resetCounter} className="button is-warning">Reset Counter from Lv3!</button></p>
         </div>

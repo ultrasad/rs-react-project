@@ -26,7 +26,7 @@ export default function Navbar(){
                 <Link to='/contact'>Contact</Link>
                 */}
 
-                <NavLink exact to='/' {...style}>Home</NavLink>
+                <NavLink exact to='/home' {...style}>Home</NavLink>
                 <NavLink to='/about' className="navbar-item is-tab" activeClassName="is-active">About</NavLink>
                 <NavLink to='/contact' className="navbar-item is-tab" activeClassName="is-active">Contact</NavLink>
                 <NavLink to='/movie' className="navbar-item is-tab" activeClassName="is-active">Movie</NavLink>
@@ -39,6 +39,7 @@ export default function Navbar(){
                 <NavLink to='/user' className="navbar-item is-tab" activeClassName="is-active">User</NavLink>
                 <NavLink to='/search' className="navbar-item is-tab" activeClassName="is-active">Search</NavLink>
                 <NavLink to='/pagination' className="navbar-item is-tab" activeClassName="is-active">Pagination</NavLink>
+                <NavLink to='/firebase' className="navbar-item is-tab" activeClassName="is-active">Firebase</NavLink>
 
             </div>
             <div className="navbar-brand">

@@ -19,6 +19,7 @@ const Slick = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Slic
 const User = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/User'))
 const Search = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Search'))
 const Pagination = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Pagination'))
+const Firebase = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Firebase'))
 
 function Loading(){
     return <h1>Loading...</h1>
@@ -46,6 +47,7 @@ export default function Routes(){
             <Route path='/user' component={User} />
             <Route path='/search' component={Search} />
             <Route path='/pagination' component={Pagination} />
+            <Route path='/firebase' component={Firebase} />
             
             {/*
             <Route path='/home'>

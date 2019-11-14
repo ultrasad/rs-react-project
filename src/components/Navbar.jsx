@@ -38,6 +38,7 @@ export default function Navbar(){
                 <NavLink to='/slick' className="navbar-item is-tab" activeClassName="is-active">Slick</NavLink>
                 <NavLink to='/user' className="navbar-item is-tab" activeClassName="is-active">User</NavLink>
                 <NavLink to='/search' className="navbar-item is-tab" activeClassName="is-active">Search</NavLink>
+                <NavLink to='/pagination' className="navbar-item is-tab" activeClassName="is-active">Pagination</NavLink>
 
             </div>
             <div className="navbar-brand">

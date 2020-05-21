@@ -94,7 +94,7 @@ function useValidation(initialValue, schema){
 
         //setDirties(Object.keys(user)) //extract key of user object
     //}, [value]);
-}, [value]);
+}, [value, schema]);
 
     return [
         value,

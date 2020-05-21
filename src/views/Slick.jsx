@@ -8,26 +8,39 @@ import { movies } from '../db.json';
 //import Slick from 'slick-carousel';
 //import 'pikaday/css/pikaday.css';
 
+const log = console.log;
+
 export default function (){
 
-    const slick = useRef(null);
+    const ref = useRef(null);
 
     function handleClick(){
+        // `current` points to the mounted text input element
+        //ref.current.hide();
         console.log("click...");
     }
 
+    /* useEffect(() => {
+        log("mount 1 ", ref.current);
+        return () => setTimeout(() => log("unmount 1 ", ref.current), 0);
+    }, []); */
+
     useEffect(() => {
-        $(slick.current).slick({
+
+        const element = ref.current;
+        log("mount 2 ", element);
+
+        $(element).slick({
             slidesToShow: 5,
             arrows: true,
             dots: true
         });
 
+        //return () => setTimeout(() => log("unmount 2 ", element), 0);
         return () => {
-            $(slick.current).slick('unslick');
+            console.log('return current: ', $(element));
+            $(element).slick('unslick');
         }
-
-        //console.log('current: ', $(divSlick.current));
 
     }, []);
 
@@ -35,7 +48,7 @@ export default function (){
         <div>
             <h1>Slick</h1>
             <hr />
-            <div ref={slick}>
+            <div ref={ref}>
                 {movies.map(({id, title}) => {
                     return (
                         <div key={id}>

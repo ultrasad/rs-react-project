@@ -8,16 +8,23 @@ export default function Ajax({children, url}){
 
     const [data, setData] = useState([]);
 
-    useEffect(() => {
+    useEffect((url) => {
         console.log("use effect...");
+
+        async function getdata(){
+            const res = await axios.get(url);
+            console.log(res.data);
+            setData(res.data);
+        }
+
         getdata(); //not use async in useEffect
     }, []);
 
-    async function getdata(){
+    /* async function getdata(){
         const res = await axios.get(url);
         console.log(res.data);
         setData(res.data);
-    }
+    } */
 
     /* async function handleClick(){
 

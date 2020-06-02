@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Level1 from '../components/Level1';
 import Clock from '../components/Clock';
 
@@ -8,7 +8,7 @@ export default function Props(props){
 
     //console.log(props);
     
-        const [counter, setCounter] = useState(1);
+        const [counter, setCounter] = useState(2);
         const [language, setLanguage] = useState('th');
 
         /* function handleClick(){
@@ -16,12 +16,17 @@ export default function Props(props){
         } */
 
         function resetCounter(){
+            console.log('reset counter, props.');
             setCounter(1);
         }
 
         function toggleLanguage(){
             setLanguage(language === 'th' ? 'en': 'th');
         }
+
+        useEffect(() => {
+            console.log('props active, counter: ', counter);
+        }, [counter]);
    
 
    //const [counter, setCounter] = useState(1);

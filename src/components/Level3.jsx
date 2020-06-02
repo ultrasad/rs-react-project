@@ -9,11 +9,12 @@ export default function Level3({counter=0, resetCounter}){ //set default initial
     const { language, toggleLanguage } = useContext(LanguageContext);
 
     function handleClick(){
-        setLocalCounter(localCounter + 1)
+        setLocalCounter(localCounter + 1);
     }
     
     //update by effect main counter
     useEffect(() => {
+        console.log('use effect set local counter, level3.');
         setLocalCounter(counter)
     }, [counter]);
 

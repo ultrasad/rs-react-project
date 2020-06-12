@@ -6,19 +6,21 @@ import axios from 'axios';
 
 export default function Ajax({children, url}){
 
+    //console.log("url...", url);
+
     const [data, setData] = useState([]);
 
-    useEffect((url) => {
-        console.log("use effect...");
+    useEffect(() => {
+       // console.log("use effect...", url, children);
 
         async function getdata(){
             const res = await axios.get(url);
-            console.log(res.data);
+            //console.log(res.data);
             setData(res.data);
         }
 
         getdata(); //not use async in useEffect
-    }, []);
+    }, [url]);
 
     /* async function getdata(){
         const res = await axios.get(url);

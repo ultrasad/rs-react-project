@@ -30,8 +30,10 @@ export default function Navbar(){
                 <NavLink to='/about' className="navbar-item is-tab" activeClassName="is-active">About</NavLink>
                 <NavLink to='/contact' className="navbar-item is-tab" activeClassName="is-active">Contact</NavLink>
                 <NavLink to='/movie' className="navbar-item is-tab" activeClassName="is-active">Movie</NavLink>
+                <NavLink to='/article' className="navbar-item is-tab" activeClassName="is-active">Article</NavLink>
                 <NavLink to='/form' className="navbar-item is-tab" activeClassName="is-active">Form</NavLink>
                 <NavLink to='/form2' className="navbar-item is-tab" activeClassName="is-active">Form2</NavLink>
+                <NavLink to='/form3' className="navbar-item is-tab" activeClassName="is-active">Form3</NavLink>
                 <NavLink to='/props' className="navbar-item is-tab" activeClassName="is-active">Props</NavLink>
                 <NavLink to='/chart' className="navbar-item is-tab" activeClassName="is-active">Chart</NavLink>
                 <NavLink to='/calendar' className="navbar-item is-tab" activeClassName="is-active">Calendar</NavLink>

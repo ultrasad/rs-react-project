@@ -10,8 +10,10 @@ const Home = lazy(() => import(/*webpackChunkName: 'home' */ '../views/Home'))
 const About = lazy(() => import(/*webpackChunkName: 'about' */ '../views/About'))
 const Contact = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Contact'))
 const Movie = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Movie'))
+const Article = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Article'))
 const Form = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Form'))
 const Form2 = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Form2'))
+const Form3 = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Form3'))
 const Props = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Props'))
 const Chart = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Chart'))
 const Calendar = lazy(() => import(/*webpackChunkName: 'contact' */  '../views/Calendar'))
@@ -38,8 +40,10 @@ export default function Routes(){
             <Route path='/about' component={About} />
             <Route path='/contact' component={Contact} />
             <Route path='/movie' component={Movie} />
+            <Route path='/article' component={Article} />
             <Route path='/form' component={Form} />
             <Route path='/form2' component={Form2} />
+            <Route path='/form3' component={Form3} />
             <Route path='/props' component={Props} />
             <Route path='/chart' component={Chart} />
             <Route path='/calendar' component={Calendar} />

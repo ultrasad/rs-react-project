@@ -5,7 +5,7 @@ const initState = {
 
 export default (state=initState, {type}) => {
 
-    console.log("action type => ", type);
+    console.log("action type => ", type, ', length => ', state.numbers.length);
     
     switch(type){
         case 'ADD':

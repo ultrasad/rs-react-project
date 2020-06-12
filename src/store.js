@@ -1,13 +1,15 @@
 import { createStore, combineReducers,applyMiddleware } from 'redux'
 import thunk from 'redux-thunk';
 
-import number from './reducers/number'
-import user from './reducers/user';
+/* index reducer(index file in reducers) */
+import number from './reducers/numberReducer'
+import user from './reducers/userReducer';
 
 const reducer = combineReducers({
-    n: number,
-    u: user
+    number,
+    user
 })
+/* end index reducer */
 
 //export default createStore(number) //number reducer
 export default createStore(reducer, applyMiddleware(thunk)) //multi reducer

@@ -1,11 +1,12 @@
 import React, {useReducer} from 'react';
+//import { render } from 'react-dom';
 
 const initState = {
     qty: 1,
     text: 'Avalible'
 }
 
-const reducer = (state, action) => {
+const counterReducer = (state, action) => {
     console.log(action);
 
     switch(action.type){
@@ -42,7 +43,7 @@ const withdraw = (qty = 1) => ({ //function retrurn obj
 
 export default function About(){
 
-    const [state, dispatch] = useReducer(reducer, initState)
+    const [state, dispatch] = useReducer(counterReducer, initState)
 
     return (
         <div>

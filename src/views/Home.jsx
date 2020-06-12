@@ -3,6 +3,8 @@
 import React, {useRef, forwardRef, useImperativeHandle} from 'react';
 import { connect } from 'react-redux' 
 
+import {addItem, deleteItem} from '../actions/numberAction';
+
 /* function Child(){
     console.log('render');
     return <h1 className="title">Child</h1>
@@ -29,26 +31,29 @@ function Child({counter}){
 //forwardRef, เซ็ตการเข้าถึง element ตัวลูก ที่มี hidden function ให้เรียกใช้
 
 const Child = forwardRef(function (props, ref){
-    const inputFieldRef = useRef(null)
+    const inputFieldRef = useRef(null);
+    console.log('ref: ', ref);
+    console.log('props: ', props);
     useImperativeHandle(ref, () => ({
         setFocus(){
             console.log('focus input');
             inputFieldRef.current.focus();
         }
-    })) //function return obj
+    })); //function return obj
 
-    return (<input ref={inputFieldRef} type="text" className="input" />)
-})
+    return (<input ref={inputFieldRef} type="text" className="input" name="forward_ref" />);
+});
 
-const addItem = () => ({
+//move this action to actions
+/* const addItem = () => ({
     type: 'ADD'
 })
 
 const deleteItem = () => ({
     type: 'DELETE'
-})
+}) */
 
-export default connect()(function Home({dispatch}){
+const Home = ({title, dispatch}) => {
 
     /* const [counter, setCounter] = useState(1);
 
@@ -57,10 +62,11 @@ export default connect()(function Home({dispatch}){
     } */
 
     console.log('dispatch: ', dispatch);
+    console.log('title: ', title);
 
     const childComponentRef = useRef(null);
 
-    function  handleFocus(){
+    function handleFocus(){
         //console.log(childComponentRef.current);
         childComponentRef.current.setFocus();
     }
@@ -95,4 +101,15 @@ export default connect()(function Home({dispatch}){
 
         </div>
     )
-})
+}
+
+const mapStateToProps = function(state) {
+    return {
+      //username: state.user.username || 'Hanajung'
+      //username: state.user.username || 'Hanajung',
+      //paramx: 'OMG !!'
+      title: state.number.title
+    }
+};
+
+export default connect(mapStateToProps)(Home)

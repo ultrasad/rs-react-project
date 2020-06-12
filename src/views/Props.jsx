@@ -26,6 +26,9 @@ export default function Props(props){
 
         useEffect(() => {
             console.log('props active, counter: ', counter);
+            return () => {
+                console.log('Unmount inside useEffect, Props');
+            }
         }, [counter]);
    
 
